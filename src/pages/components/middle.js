@@ -1,11 +1,23 @@
 import React from 'react'
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { orange } from '@mui/material/colors';
+import { Button, CardActionArea, CardActions } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import { Box, display } from '@mui/system'
+import Container from '@mui/material/Container';
+
+
+
+export default function Middle({hotRoomsObj}) {
+  const colorReviewBtn=orange[500];
 
 
 
 
-export default function Middle() {
+
   return (
   <main>
 <section>
@@ -62,22 +74,47 @@ export default function Middle() {
 
 <section>
 
-   <Box sx={{flexGrow:1}}>
-    <Grid container  spacing={2} >
-                <Grid item xs={4}>
+<Container maxWidth="lg" sx={{}}>
+<Box  sx={{background:"lightblue",display:"flex",justifyContent:"space-between",height:"500px"}}>
+{hotRoomsObj.map((obj)=>{
+  return( 
+  <>
+    <Card sx={{ maxWidth: 445,maxHeight:350}} key={obj.roomName}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image={obj.hotRoomImg}
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {obj.roomName}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button variant="contained" size="large" color="primary">
+          Review
+        </Button>
+      </CardActions>
+    </Card>
+  
+  </>
+  
+    )
+})}
 
-                </Grid>
-                <Grid item xs={4}>
 
-                </Grid>
 
-                <Grid item xs={4}>
+</Box>
 
-                </Grid>
 
-    </Grid>
-   </Box>
-
+</Container>
 </section>
 
   </main>
