@@ -114,7 +114,7 @@ export default function Middle({hotRoomsObj}) {
 </Container>
 <br></br>
 <Container maxWidth="lg" sx={{width:"100%"}}>
-
+<h2 style={{margin:"0 0 20px 50%",textAlign:"center",color:"white",width:"200px",height:"60px",background:"#048BCC",lineHeight:"60px"}}>Rooms</h2>
 <Box sx={{maxHeight:"auto",width:"auto",boxShadow:" 0 0 10px #F5F5F5",display:"flex",flexWrap:"wrap",justifyContent:"space-around"}}>
 
 {hotRoomsObj.map((obj)=>{

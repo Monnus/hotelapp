@@ -2,6 +2,7 @@
 import "./components/styles/landingpage.css"
 import Header from "./components/header"
 import Middle from "./components/middle"
+import Footer from "./components/footer"
 import hotroom1 from "./Images/rooms/hotroom1.jpg"
 import hotroom2 from "./Images/rooms/hotroom2.jpg"
 import hotroom3 from "./Images/rooms/hotroom3.jpg"
@@ -75,6 +76,7 @@ export default function LandingPage() {
     <div  className='Page'>
         <Header/>
           <Middle hotRoomsObj={hotRoomsObj}/>
+            <Footer/>
         </div>
   )
 }

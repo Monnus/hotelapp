@@ -20,9 +20,15 @@ export default function Header() {
          <LogoutRoundedIcon sx={{fontSize:40}}/><li style={{display:"inline-block"  }}>logout</li>
         </ul>
       </nav>
-      <div style={{background:"black",opacity:0.7,height:"80%",display:"flex",alignItems:"center",justifyContent:"center"}}>
-        
-  <img src={hotelImage} style={{width:"auto",height:"100%"}}/>
+      <div style={{backgroundImage:`url(${hotelImage})`,backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundPosition:"center",background:"black",opacity:0.7,height:"80%",display:"flex",justifyContent:"center"}}>
+      <h1 style={{color:"white"}}>Welcome to hotel plaza</h1><br></br>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent purus ante, tempus eu sollicitudin vel,
+         iaculis quis nunc. Curabitur a ultricies tortor, in accumsan dolor.
+          Etiam sed metus pulvinar, vestibulum arcu eu, finibus tellus.
+           Cras laoreet, massa a cursus egestas, erat est aliquam quam, vitae commodo justo libero nec turpis. 
+           Ut vel arcu massa. Proin rhoncus sagittis efficitur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+           Etiam in risus quis sem pharetra gravida.    </p>
+
       </div>
       <div className='' ><img src={profileImage} style={{borderRadius:"100px"}} className="profileIMGHomePage"/></div>
     </Box>
