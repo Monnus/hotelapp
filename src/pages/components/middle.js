@@ -74,16 +74,17 @@ export default function Middle({hotRoomsObj}) {
 
 <section>
 
-<Container maxWidth="lg" sx={{}}>
-<Box  sx={{background:"lightblue",display:"flex",justifyContent:"space-between",height:"500px"}}>
+<Container maxWidth="lg" sx={{margin:"0 200px 0 0"}}>
+  <h3  style={{margin:"0 0 20px 50%",textAlign:"center",color:"white",width:"200px",height:"60px",background:"#048BCC",lineHeight:"60px"}}>Best selling rooms</h3>
+<Box  sx={{background:"#5DBBFF",display:"flex",justifyContent:"space-around",height:"auto", flexWrap:"wrap"}}>
 {hotRoomsObj.map((obj)=>{
   return( 
   <>
-    <Card sx={{ maxWidth: 445,maxHeight:350}} key={obj.roomName}>
+    <Card sx={{ maxWidth: 445,maxHeight:325,"&:hover":{opacity:0.9},}} key={obj.roomName}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="200"
           image={obj.hotRoomImg}
           alt="green iguana"
         />
@@ -91,10 +92,7 @@ export default function Middle({hotRoomsObj}) {
           <Typography gutterBottom variant="h5" component="div">
             {obj.roomName}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
+        
         </CardContent>
       </CardActionArea>
       <CardActions>
@@ -113,7 +111,43 @@ export default function Middle({hotRoomsObj}) {
 
 </Box>
 
+</Container>
+<br></br>
+<Container maxWidth="lg" sx={{width:"100%"}}>
 
+<Box sx={{maxHeight:"auto",width:"auto",boxShadow:" 0 0 10px #F5F5F5",display:"flex",flexWrap:"wrap",justifyContent:"space-around"}}>
+
+{hotRoomsObj.map((obj)=>{
+  return( 
+  <>
+    <Card sx={{ maxWidth: 445,maxHeight:325,"&:hover":{opacity:0.9},}} key={obj.roomName}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="200"
+          image={obj.hotRoomImg}
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {obj.roomName}
+          </Typography>
+        
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button variant="contained" size="large" color="primary">
+          Review
+        </Button>
+      </CardActions>
+    </Card>
+  
+  </>
+  
+    )
+})}
+
+</Box>
 </Container>
 </section>
 

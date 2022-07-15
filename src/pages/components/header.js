@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, display } from '@mui/system'
 import logo from "../Images/Frame33_logo.png"
-import hotelImage from "../Images/Frame33_Rectangle2.png"
+import hotelImage from "../Images/Frame33_Rectangle2.jpg"
 import HomeIcon from '@mui/icons-material/Home';
 import AdminPanelSettingsRoundedIcon from '@mui/icons-material/AdminPanelSettingsRounded';
 import BookRoundedIcon from '@mui/icons-material/BookRounded';
@@ -22,7 +22,7 @@ export default function Header() {
       </nav>
       <div style={{background:"black",opacity:0.7,height:"80%",display:"flex",alignItems:"center",justifyContent:"center"}}>
         
-  <img src={hotelImage} style={{width:"600px",height:"100%"}}/>
+  <img src={hotelImage} style={{width:"auto",height:"100%"}}/>
       </div>
       <div className='' ><img src={profileImage} style={{borderRadius:"100px"}} className="profileIMGHomePage"/></div>
     </Box>
